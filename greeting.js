@@ -3,6 +3,10 @@
 const nameForm = document.querySelector(".js-nameForm");
 const input = nameForm.querySelector("input");
 const greeting = document.querySelector(".js-greeting");
+const toDoForm = document.querySelector(".js-todoForm");
+const toDoListUl = document.querySelector(".js-todoList");
+
+
 
 const USER_NAME_LS = "userName";
 const SHOW_DISPLAY_CLS_NM = "showDisplay";
@@ -29,6 +33,8 @@ function askUserName(){
 
 function paintGreeting(name){
     nameForm.classList.remove(SHOW_DISPLAY_CLS_NM);
+    toDoForm.classList.add(SHOW_DISPLAY_CLS_NM);
+    toDoListUl.classList.add(SHOW_DISPLAY_CLS_NM);
     greeting.classList.add(SHOW_DISPLAY_CLS_NM);
     greeting.innerHTML = `Hello ${name}! <br>Welcome to This Page!`;
 }
